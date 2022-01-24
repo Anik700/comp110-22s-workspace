@@ -3,15 +3,22 @@
 __author__ = "730243145"
 
 # instantiate variables that accept user input
+
 word: str = input("Enter a 5-character word:")
+
 # Checking that user input abides by set constraints
+
 if (len(word) == 5):
     character: str = input("Enter a single character:")
     if (len(character) == 1):
         print("Searching for " + character + " in " + word)
+
         # Number of occurances 
+        
         count = 0
+
 # Searching string for inputed character acorss indexes
+
         if (word[0] == character):
             print(character + " found at index 0")
             count = count + 1
@@ -36,11 +43,17 @@ if (len(word) == 5):
             print("No instances of" + character + " in " + word)
         if count > 1:
             print(str(count) + " instances of " + character + " found in " + word)
+
+# Error messages if constraints not met
+
+        if count < 1:
+            print("No instances of " + character + " found in " + word)
         else:
-#Program output
+
+
             print(str(count) + " instance of " + character + " found in " + word)
 
-#Error messages if contraints not met
+
     else: 
         print("Error: Character must be a single character")
         quit()
