@@ -2,10 +2,10 @@
 
 __author__ = "730243145"
 
-def contains_char(word: str, index: str) -> bool:
-    assert len(index) == 1
-
+def contains_char(word : str, index : str) -> bool:
     """Defining Character Search."""
+    assert len(index) == 1
+    
     i = 0
 
     while i < len(word):
@@ -14,13 +14,13 @@ def contains_char(word: str, index: str) -> bool:
         i += 1
     return False
 
-def emojified(guess: str, secret: str) -> str:
+def emojified(guess : str, secret : str) -> str:
+    """Adding Colored Boxes to Output."""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
     
-    """Adding Colored Boxes to Output."""
     i = 0
     returned = ""
     while i < len(guess):
@@ -35,7 +35,7 @@ def emojified(guess: str, secret: str) -> str:
     return returned
 
 
-def input_guess(exp_len: int) -> str:
+def input_guess(exp_len : int) -> str:
 
     """Analyzing Expected Length and Guess Length."""
     inp = str(input(f"Enter a {exp_len} character word: "))
