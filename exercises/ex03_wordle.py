@@ -3,6 +3,7 @@
 __author__ = "730243145"
 
 def contains_char(word: str, index: str) -> bool:
+
     """Defining Character Search."""
     assert len(index) == 1
     
@@ -15,6 +16,7 @@ def contains_char(word: str, index: str) -> bool:
     return False
 
 def emojified(guess: str, secret: str) -> str:
+
     """Adding Colored Boxes to Output."""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C"
@@ -36,6 +38,7 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def input_guess(exp_len: int) -> str:
+
     """Analyzing Expected Length and Guess Length."""
     inp = str(input(f"Enter a {exp_len} character word: "))
     
@@ -45,6 +48,7 @@ def input_guess(exp_len: int) -> str:
     return inp
 
 def main() -> None:
+    
     """The entrypoint of the program and main game loop."""
     SECRET = "codes"
     turns = 1
@@ -65,4 +69,4 @@ def main() -> None:
         turns += 1
 
     if turns == 7:
-        print ("X/6 - Sorry, try again tomorrow!")
+        print("X/6 - Sorry, try again tomorrow!")
