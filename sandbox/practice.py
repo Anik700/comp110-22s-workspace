@@ -1,6 +1,10 @@
-"""Advanced String"""
+from tkinter import Y
 
-age: int = 21
-msg: str = f"You are {age}!"
 
-print(msg)
+x: int = 0
+
+def f() -> None:
+    x: int = 1
+
+f()
+print(x)
