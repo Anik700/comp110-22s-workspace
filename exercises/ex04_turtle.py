@@ -8,6 +8,7 @@ def main() -> None:
     """The entrypoint of my scene"""
     #initializing turtle variable
     ertle: Turtle = Turtle()
+    ertle.speed(0)
     #background color
     draw_sky(ertle, -500, 400, 300)
     #drawing ground
@@ -70,12 +71,13 @@ def draw_stars(bob: Turtle, x:float, y:float) -> None:
     bob.pendown()
     bob.color("yellow")
     bob.fillcolor("yellow")
-
+    bob.begin_fill()
     i: int = 0
     while (i < 5):
         bob.forward(50)
         bob.left(144)
         i = i + 1
+    bob.end_fill()
 
 def draw_moon(bob: Turtle, x:float, y:float) -> None:
     """Drawing the Moon.""" 
@@ -84,8 +86,10 @@ def draw_moon(bob: Turtle, x:float, y:float) -> None:
     bob.pendown()
     bob.color("yellow")
     bob.fillcolor("yellow")
+    bob.begin_fill()
     r = 50
     bob.circle(r)
+    bob.end_fill()
 
 
 """For drawing the people, I decided to break down their bodies into simpler functions."""
@@ -144,10 +148,12 @@ def draw_people(bob: Turtle, x: float, y: float) -> None:
     bob.goto(x, y)
     bob.color("white")
     bob.fillcolor("white")
+    bob.begin_fill()
     draw_head(bob)
     draw_torso(bob, 100)
     draw_arms(bob)
     draw_legs(bob)
+    bob.end_fill()
 
 
 if __name__ == "__main__":
