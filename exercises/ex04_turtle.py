@@ -1,26 +1,27 @@
 """A Poor Man's Starry Night."""
 
-__author__= "730243145"
+from turtle import Turtle, done
 
-from turtle import Turtle, colormode, done
+__author__ = "730243145"
+
 
 def main() -> None:
-    """The entrypoint of my scene"""
-    #initializing turtle variable
+    """The entrypoint of my scene."""
+    # initializing turtle variable.
     ertle: Turtle = Turtle()
     ertle.speed(0)
-    #background color
+    # background color.
     draw_sky(ertle, -500, 400, 300)
-    #drawing ground
+    # drawing ground.
     draw_ground(ertle, -500, -300, 300)
-    #drawing moon
+    # drawing moon
     draw_moon(ertle, 150, 275)
-    #drawing stars
+    # drawing stars.
     draw_stars(ertle, -300, 300)
     draw_stars(ertle, -100, 250)
     draw_stars(ertle, 0, 300)
     draw_stars(ertle, 300, 250)
-    #drawing people
+    # drawing people.
     i: int = 0
     x = 50
     while i < 2:
@@ -29,10 +30,11 @@ def main() -> None:
         i = i + 1
     done()
 
+
 def draw_ground(bob: Turtle, x: float, y: float, width: float) -> None:
     """Draw a rectangle for the ground of the scene."""
     bob.penup()
-    bob.goto(x,y)
+    bob.goto(x, y)
     bob.color("green")
     bob.fillcolor("green")
     bob.pendown()
@@ -46,10 +48,11 @@ def draw_ground(bob: Turtle, x: float, y: float, width: float) -> None:
         i = i + 1
     bob.end_fill()
 
+
 def draw_sky(bob: Turtle, x: float, y: float, width: float) -> None:
     """Draw a rectangle for the sky."""
     bob.penup()
-    bob.goto(x,y)
+    bob.goto(x, y)
     bob.color("dark blue")
     bob.fillcolor("dark blue")
     bob.pendown()
@@ -64,7 +67,7 @@ def draw_sky(bob: Turtle, x: float, y: float, width: float) -> None:
     bob.end_fill()
 
 
-def draw_stars(bob: Turtle, x:float, y:float) -> None:
+def draw_stars(bob: Turtle, x: float, y: float) -> None:
     """Drawing Stars."""
     bob.penup()
     bob.goto(x, y)
@@ -79,7 +82,8 @@ def draw_stars(bob: Turtle, x:float, y:float) -> None:
         i = i + 1
     bob.end_fill()
 
-def draw_moon(bob: Turtle, x:float, y:float) -> None:
+
+def draw_moon(bob: Turtle, x: float, y: float) -> None:
     """Drawing the Moon.""" 
     bob.penup()
     bob.goto(x, y)
@@ -93,6 +97,8 @@ def draw_moon(bob: Turtle, x:float, y:float) -> None:
 
 
 """For drawing the people, I decided to break down their bodies into simpler functions."""
+
+
 def draw_torso(bob: Turtle, length: float) -> None:
     """Drawing body."""
     bob.left(90)
@@ -101,6 +107,7 @@ def draw_torso(bob: Turtle, length: float) -> None:
     bob.up()
     bob.back(length)
     bob.left(90)
+
 
 def draw_legs(bob: Turtle) -> None:
     """Drawing legs."""
@@ -118,6 +125,7 @@ def draw_legs(bob: Turtle) -> None:
     bob.back(100)
     bob.left(90)
 
+
 def draw_arms(bob: Turtle) -> None:
     """Draw arms."""
     bob.right(90)
@@ -134,8 +142,9 @@ def draw_arms(bob: Turtle) -> None:
     bob.back(30)
     bob.left(90)
 
-def draw_head(bob: Turtle) ->None:
-    """Drawing head"""
+
+def draw_head(bob: Turtle) -> None:
+    """Drawing head."""
     bob.down()
     bob.setheading(180.0)
     for x in range(360):
@@ -143,7 +152,9 @@ def draw_head(bob: Turtle) ->None:
         bob.right(1)
     bob.up()
 
+
 def draw_people(bob: Turtle, x: float, y: float) -> None:
+    """Drawing People."""
     bob.penup()
     bob.goto(x, y)
     bob.color("white")
@@ -158,8 +169,3 @@ def draw_people(bob: Turtle, x: float, y: float) -> None:
 
 if __name__ == "__main__":
     main()
-
-
-
-
-    
