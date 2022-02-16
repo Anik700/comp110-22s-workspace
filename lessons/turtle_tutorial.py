@@ -1,14 +1,16 @@
+from pickletools import floatnl
 from turtle import Turtle, colormode, done
 bob: Turtle = Turtle()
 
-leo.penup()
-leo.goto(45, 60)
-leo.pendown()
+bob.penup()
+bob.goto(50, 50)
+bob.color("yellow","yellow")
+bob.pendown()
 
 i: int = 0
-while (i < 3):
-    leo.forward(300)
-    leo.left(120)
+while (i < 5):
+    bob.forward(200)
+    bob.left(144)
     i = i + 1
 
 done()
