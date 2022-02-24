@@ -2,18 +2,17 @@
 
 __author__ = "730243145"
 
-def only_evens(input: list[int]) -> list[int]:
+def only_evens(input_list: list[int]) -> list[int]:
    """Taking a list of int and returning only the even int values""" 
 
 
-   input_list: list[int] = list()
+   #input_list: list[int] = list()
    even_num: list[int] = []
 
    for i in input_list:
-       if input_list[i] % 2 == 0:
-           even_num.append(input_list[i])
+       if i % 2 == 0:
+           even_num.append(i)
    return even_num
-
 
 
 def sub(input_list: list[int], start_ind: int, end_ind: int) -> list[int]:
@@ -38,7 +37,8 @@ def concat(first:list[int], second:list[int]) -> list[int]:
     """Concatenating two lists."""
 
     i = 0
-    while i <= len(second):
+    
+    while i < len(second):
         first.append(second[i])
         i += 1
     return first
