@@ -1,8 +1,9 @@
 """Here is my Dictionary."""
 __author__ = "730243145"
 
+
 # invert function defined
-def invert (a: dict[str, str]) -> dict[str, str]:
+def invert(a: dict[str, str]) -> dict[str, str]:
     """Inverting The Dictionary."""
     result: dict[str, str] = {}
     for key in a:
@@ -11,8 +12,9 @@ def invert (a: dict[str, str]) -> dict[str, str]:
         result[a[key]] = key
     return result
 
+
 # Fav_color function defined
-def favorite_color (a: dict[str, str]) -> str:
+def favorite_color(a: dict[str, str]) -> str:
     """Favorite Color Generator."""
     result: dict[str, int] = {}
     for key in a:
@@ -29,6 +31,7 @@ def favorite_color (a: dict[str, str]) -> str:
             count = result[key]
     
     return mode
+
 
 # count functiond defined
 def count(x: list[str]) -> dict[str, int]:
