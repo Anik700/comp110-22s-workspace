@@ -6,16 +6,19 @@ from dictionary import invert
 from dictionary import favorite_color
 from dictionary import count
 
+
 # invert tests defined
 def test_invert_1() -> None:
     """Invert Use Case Test 1."""
-    input_dict: dict[str, str] = {'a': 'z', 'b' : 'y', 'c': 'x'}
+    input_dict: dict[str, str] = {'a': 'z', 'b': 'y', 'c': 'x'}
     assert invert(input_dict) == {'z': 'a', 'y': 'b', 'x': 'c'}
+
 
 def test_invert2() -> None:
     """Invert Use Case Test 2."""
     input_dict: dict[str, str] = {'apple': 'cat'}
     assert invert(input_dict) == {'cat': 'apple'}
+
 
 # Test suppposed to return a KeyError
 def test_invert_3() -> None:
@@ -23,6 +26,7 @@ def test_invert_3() -> None:
     with pytest.raises(KeyError):
         my_dictionary = {'kris': 'jordan', 'michael': 'jordan'}
         invert(my_dictionary)      
+
 
 # fav_color tests defined
 def test_favorite_color_1() -> None:
@@ -33,7 +37,7 @@ def test_favorite_color_1() -> None:
 
 def test_favorite_color_2() -> None:
     """Favorite Color Use Case Test 2."""
-    input_dict: dict[str, str] = {"Andrew": "yellow", "Aniketh": "blue", "John": "pink", "Logan": "pink" }
+    input_dict: dict[str, str] = {"Andrew": "yellow", "Aniketh": "blue", "John": "pink", "Logan": "pink"}
     assert favorite_color(input_dict) == "pink"
 
 
@@ -41,6 +45,7 @@ def test_favorite_color_3() -> None:
     """Favorite Color Edge Case Test."""
     input_dict: dict[str, str] = {"Marc": "yellow", "Chloe": "yellow", "Ezri": "Blue", "Kris": "Blue"}
     assert favorite_color(input_dict) == "yellow"
+
 
 # count tests defined
 def test_count_1() -> None:
