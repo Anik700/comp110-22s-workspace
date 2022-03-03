@@ -5,7 +5,6 @@ __author__ = "730243145"
 def invert (a: dict[str, str]) -> dict[str, str]:
     """Inverting The Dictionary."""
     result: dict[str, str] = {}
-    count = {}
     for key in a:
         if a[key] in result.keys():
             raise KeyError
