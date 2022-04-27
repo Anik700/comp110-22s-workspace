@@ -72,32 +72,18 @@ def max(head: Optional[Node]) -> int:
         else:
             return max(head.next)
 
+
 def linkify(items: list[int]) -> Optional[Node]:
     """Converts list[int] to linked list."""
-    index = 1
-    linked_list = None
-    if len(items) == 0:
+    if items == None or len(items) == 0:
         return None
     else:
-        linked_list = Node(items[0], None)
-        pointer = linked_list
-        while index < len(items):
-            pointer.next = Node(items[index], None)
-            index += 1
-            pointer = pointer.next
+        return Node(items[0], linkify(items[1:]))
 
-    return linked_list
 
 def scale(head: Optional[Node], factor: int) -> Optional[Node]:
     """Scales a linked list by a factor."""
-    index = 0
-    scaled = []
     if head == None:
-        raise IndexError("Can't do that")
+        return None
     else:
-        pointer = head
-        while pointer != None:
-            print(scaled, pointer)
-            scaled.append(pointer.data * factor)
-            pointer = pointer.next
-        return linkify(scaled)
+        return Node(head.data * factor, scale(head.next, factor))
