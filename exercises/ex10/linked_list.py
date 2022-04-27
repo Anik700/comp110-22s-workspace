@@ -3,7 +3,7 @@
 from __future__ import annotations
 from typing import Optional
 
-__author__ = "73024"
+__author__ = "730243145"
 
 
 class Node:
@@ -55,13 +55,13 @@ def value_at(head: Optional[Node], index: int) -> int:
         if head == None:
             raise IndexError("Index is out of bounds on the list.")
         else:
-            return value_at(head.next,index-1)
+            return value_at(head.next, index - 1)
 
 
 def max(head: Optional[Node]) -> int:
     """Returns the max value of linked list."""
     if head == None:
-        raise IndexError("Cannot call max with None")
+        return None
     else:
         if head.next == None:
             return head.data

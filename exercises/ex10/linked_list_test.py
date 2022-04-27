@@ -1,6 +1,5 @@
 """Tests for linked list utils."""
 
-from ast import Raise
 import pytest
 from exercises.ex10.linked_list import Node, last, value_at, max, linkify, scale
 
@@ -45,13 +44,13 @@ def test_max2() -> None:
 
 
 def test_linkify() -> None:
-    """Testing a normal list into a linked list. """
+    """Testing a normal list into a linked list."""
     input_list: list[int] = [1, 2, 3, 4]
     assert linkify(input_list).__str__() == Node(1, Node(2, Node(3, Node(4, None)))).__str__()
 
 
 def test_linkify2() -> None:
-    """Testing if input list is empty. """
+    """Testing if input list is empty."""
     input_list: list[int] = []
     assert linkify(input_list) == None
 
